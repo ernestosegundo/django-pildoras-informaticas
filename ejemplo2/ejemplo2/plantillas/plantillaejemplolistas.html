@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de uso de plantillas en Django</title>
+</head>
+<body>
+    <h1>Ejemplo de uso de plantillas en Django</h1>
+    <h2>Secciones</h2>
+    <p>{{secciones}}</p>
+    <p>Secciones</p>
+    <p>
+        {% for seccion in secciones %}
+            {{seccion}}
+        {% endfor %}
+    </p>
+    <p>Secciones</p>
+    <p>
+        <ul>
+        {% for seccion in secciones %}
+            <li>{{seccion}}</li>
+        {% endfor %}
+        </ul>
+    </p>
+    <h2>Colores</h2>
+    <p>
+        {% if colores %}
+            {{colores}}
+        {% else %}
+            <p>Colores no definidos</p>    
+        {% endif %}
+    </p>
+</body>
+</html>
