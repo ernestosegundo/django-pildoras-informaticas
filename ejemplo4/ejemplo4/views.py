@@ -1,5 +1,4 @@
 from django.http import HttpResponse
-from django.template import Template, Context
 from django.template.loader import get_template
 
 def get_index(request):
