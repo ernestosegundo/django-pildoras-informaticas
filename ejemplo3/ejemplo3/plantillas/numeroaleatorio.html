@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de uso de plantillas en Django</title>
+</head>
+<body>
+    <h1>Ejemplo de uso de plantillas en Django</h1>
+    <p>El n&uacute;mero aleatorio es {{numero_aleatorio}}</p>
+    <p>
+        {% if numero_aleatorio > 50 %}
+            <p>Arriba de 50</p>
+        {% else %}
+            <p>Abajo de 50</p>
+        {% endif %}
+
+        {# Comentario de una línea #}
+        {% comment %}
+            Comentario de varias líneas
+        {% endcomment %}
+    </p>
+</body>
+</html>
