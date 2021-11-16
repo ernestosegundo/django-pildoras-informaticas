@@ -13,11 +13,19 @@ def buscar(request):
 
         articulo = request.GET["articulo"]
 
-        articulos = Articulo.objects.filter(nombre__icontains=articulo)
+        if len(articulo) > 30:
+            mensaje = "Texto de búsqueda demasiado largo"
+        else:
+            articulos = Articulo.objects.filter(nombre__icontains=articulo)
 
-        return render(request, "resultadosbusquedaarticulos.html", {"articulos": articulos, "query": articulo})
+            return render(request, "resultadosbusquedaarticulos.html", {"articulos": articulos, "query": articulo})
     else:
         mensaje = "No se ingresó el artículo a buscar"
 
     return HttpResponse(mensaje)
 
+def contacto(request):
+    if request.method == "POST":
+        return render(request, "trabajando.html")
+
+    return render(request, "contacto.html")
