@@ -5,6 +5,7 @@ from django.core.mail import message, send_mail
 from django.conf import settings
 
 from gestionpedidos.models import Articulo
+from gestionpedidos.forms import FormularioContacto
 
 # Create your views here.
 def buscar_articulos(request):
@@ -29,13 +30,19 @@ def buscar(request):
 
 def contacto(request):
     if request.method == "POST":
-        subject = request.POST["asunto"]
-        message = request.POST["mensaje"] + " " + request.POST["email"]
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = ["rsernesto@gmail.com"]
+        formulario_contacto = FormularioContacto(request.POST)
 
-        send_mail(subject, message, email_from, recipient_list)
+        if formulario_contacto.is_valid():
+            datos_formulario_contacto = formulario_contacto.cleaned_data
 
-        return render(request, "realizado.html", {"realizado": "El mensaje de correo electrónico se envió correctamente. En breve le contactaremos a " + request.POST["email"]})
+            send_mail(datos_formulario_contacto["asunto"], 
+                    datos_formulario_contacto["mensaje"], 
+                    datos_formulario_contacto.get("email", ""), ["rsernesto@gmail.com"],)    
 
-    return render(request, "contacto.html")
+            return render(request, "realizado.html", {"realizado": "El mensaje de correo electrónico se envió correctamente. En breve le contactaremos a " + request.POST["email"]})
+    else:
+        formulario_contacto = FormularioContacto()
+
+    return render(request, "formulariocontacto.html", {"form": formulario_contacto})    
+
+ 
