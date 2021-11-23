@@ -277,3 +277,20 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.author-block{
+  text-align: right;
+}
+
+.author-text{
+  color:rgba(255, 255, 255, 0.4);
+  font-style: italic;
+}
+
+.categorias-block{
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  color: white; 
+}
