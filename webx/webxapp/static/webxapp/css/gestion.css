@@ -294,3 +294,12 @@ ul.errorlist{
   text-align: center;
   color: white; 
 }
+
+.categorias-links{
+  color: #FFC !important;
+  text-decoration: underline;
+}
+
+.categorias-links:hover{
+  text-decoration: none;
+}
