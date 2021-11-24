@@ -5,16 +5,21 @@
 {% block content %}
     <section class="page-section clearfix">
         <div class="container">
-            <!--<div class="intro">
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="" alt=""> -->
-                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-lower">Contacto</span>
-                        <span class="section-heading-upper">Formulario de contacto</span>
-                    </h2>
-                    <p>{{formulario_contacto}}</p>
-                </div>
-            <!--</div>-->
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-lower">Contacto</span>
+                    <span class="section-heading-upper">Formulario de contacto</span>
+                </h2>
+            </div>
+            <div class="container_form">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{formulario_contacto.as_table}}
+                    </table>
+                    <div class="center-element"><input type="submit" value="Enviar" class="btn" /></div>
+                </form>
+            </div>
         </div>
     </section>
 {% endblock %}
