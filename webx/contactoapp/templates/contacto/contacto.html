@@ -12,6 +12,9 @@
                 </h2>
             </div>
             <div class="container_form">
+                {% if "valido" in request.GET %}
+                    <p>Información enviada correctamente. Gracias.</p>
+                {% endif %}
                 <form action="" method="POST">
                     {% csrf_token %}
                     <table>
