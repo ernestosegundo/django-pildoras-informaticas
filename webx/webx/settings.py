@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'webxapp',
     'serviciosapp',
     'blogapp',
+    'contactoapp',
 ]
 
 MIDDLEWARE = [

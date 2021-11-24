@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('webxapp.urls')),
     path('servicios/', include('serviciosapp.urls')),
     path('blog/', include('blogapp.urls')),
+    path('contacto/', include('contactoapp.urls')),
 ]

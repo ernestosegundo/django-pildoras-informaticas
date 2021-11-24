@@ -6,6 +6,3 @@ def home(request):
 
 def tienda(request):
     return render(request, "webxapp/tienda.html")
-
-def contacto(request):
-    return render(request, "webxapp/contacto.html")
