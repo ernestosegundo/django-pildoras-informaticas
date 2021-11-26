@@ -318,3 +318,8 @@ ul.errorlist{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.shopping_cart{
+  color: white;
+  float: right;
+}
