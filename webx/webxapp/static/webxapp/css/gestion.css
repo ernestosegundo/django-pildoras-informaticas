@@ -314,6 +314,7 @@ ul.errorlist{
   text-align: left;
 }
 
-.center-element{
-  text-align: center;
+.space-by-element{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
