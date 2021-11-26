@@ -13,19 +13,23 @@
             </div>
         </div>
     </section>
-    {% for producto in productos %}
+
     <section class="page-section clearfix">
         <div class="container">
-            <div class="intro">
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{producto.imagen.url}}" alt="">
-                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                    <h2 class="section-heading mb-4">
-                        <span class="section-heading-lower">{{producto.nombre}}</span>
-                        <span class="section-heading-upper">{{producto.precio}}</span>
-                    </h2>
+            <div class="row">
+                {% for producto in productos %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="{{producto.imagen.url}}" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">{{producto.nombre}}</h6>
+                            <span class="card-text">{{producto.precio}}</span>
+                        </div>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-    {% endfor %}
+   
 {% endblock %}
