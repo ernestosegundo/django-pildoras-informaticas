@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "taip"
+		},
+		{
+			"path": "ejemplo1"
+		},
+		{
+			"path": "ejemplo2"
+		},
+		{
+			"path": "ejemplo3"
+		},
+		{
+			"path": "ejemplo4"
+		},
+		{
+			"path": "ejemplo5"
+		},
+		{
+			"path": "ejemplo6"
+		},
+		{
+			"path": "tiendaonline"
+		},
+		{
+			"path": "webx"
+		},
+		{
+			"path": "ernestosegundo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ernestosegundo"
+	}
+}
